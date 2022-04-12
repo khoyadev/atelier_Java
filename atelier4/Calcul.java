@@ -20,6 +20,7 @@ public class Calcul {
                 }
                 
                 produit(x, y);
+        
 				break;
 		
 			} catch (InputMismatchException e) {
