@@ -30,20 +30,13 @@ public class PersonneCondition {
     //static PersonneCondition[] personnes;
     public static void main(String[] args) {
         Scanner perso = new Scanner(System.in);
-        // System.out.println("Combien de personne voulez-vous saisi");
-        // int x = perso.nextInt();
-
-        // PersonneCondition[] personnes = new PersonneCondition[x];
-        // perso.nextLine();
-        // for (int i = 0; i < x; i++) {
             int reponse;
-            //PersonneCondition[] personnes = new PersonneCondition[x];
+            
             ArrayList<PersonneCondition> personnes = new ArrayList<PersonneCondition>();
-            //int n =1;
+            
         do {
-            //personnes = new PersonneCondition[n];
-            //System.out.println("Veillez saisi la personne "+(i+);
             System.out.println("Votre Matricule :");
+            perso.nextLine();
             String mat = perso.nextLine();
             System.out.println("Votre Nom :");
             String nom = perso.nextLine();
@@ -61,19 +54,15 @@ public class PersonneCondition {
             PersonneCondition personne = new PersonneCondition(mat, nom, prenom, adresse, date, lieu, numero);
             personnes.add(personne);
             
-            System.out.println("voulez-vous encore Saisir un autre Personne 0 1");
+            System.out.println("voulez-vous encore Saisir un autre Personne Tapez:0(quitter) 1(ajouter)");
             reponse = perso.nextInt();
             
         } while (reponse == 1);
-        
-       // }
-        // for (int i = 0; i < personnes.length; i++) {
-        //     personnes[i].PersonneAfficher();
-        // }
+        System.out.println("vous avez enregistrer");
         for (PersonneCondition i : personnes) {
             i.PersonneAfficher();
+            System.out.println("===================================================================");
           }
-        //personne
         perso.close();
         
     }
